@@ -1,0 +1,24 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	orchestrator(orchestrator)
+	research_agent_node(research_agent_node)
+	blogger_agent_node(blogger_agent_node)
+	research_tool_node(research_tool_node)
+	synthesizer(synthesizer)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> orchestrator;
+	blogger_agent_node -.-> synthesizer;
+	orchestrator -.-> blogger_agent_node;
+	orchestrator -.-> research_agent_node;
+	research_agent_node -.-> research_tool_node;
+	research_agent_node -.-> synthesizer;
+	research_tool_node --> research_agent_node;
+	synthesizer --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

@@ -1,0 +1,12 @@
+langchain-experimental
+langchain-openai
+pandas
+requests==2.32.4
+gdown
+openai
+deepagents
+tavily-python 
+langchain-tavily
+google-search-results
+ipython
+grandalf
